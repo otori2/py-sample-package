@@ -1,0 +1,13 @@
+version: '3'
+services:
+  python:
+    build:
+      context: .
+      dockerfile: ./.devcontainer/Dockerfile
+    volumes:
+      - ".:/workspace"
+      # - ".jupyter:/root/.jupyter"
+    tty: true
+    # ports:
+    #   - "${JUPYTER_PORT}:8888"
+    # command: jupyter lab --ip=0.0.0.0 --allow-root --NotebookApp.token='' --port=8888
