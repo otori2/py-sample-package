@@ -8,7 +8,7 @@ RUN apt-get -y update && \
 
 WORKDIR /workspace
 
-COPY poetry.lock pyproject.toml ./
+COPY poetry.lock* pyproject.toml ./
 
 RUN pip install poetry
 RUN poetry config virtualenvs.create false && \
