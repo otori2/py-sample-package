@@ -1,6 +1,6 @@
 version: '3'
 services:
-  python:
+  py-sample-package:
     build:
       context: .
       dockerfile: ./.devcontainer/Dockerfile

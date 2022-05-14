@@ -10,6 +10,12 @@ WORKDIR /workspace
 
 COPY poetry.lock* pyproject.toml ./
 
-RUN pip install poetry
+RUN pip install --upgrade pip && \
+    pip install pipx
+RUN pipx install poetry
+ENV PATH /root/.local/bin:/root/.local/pipx/venvs/poetry/bin:$PATH
+RUN pipx install poetry-dynamic-versioning
+# RUN pip install --upgrade pip && \
+#     pip install poetry poetry-dynamic-versioning
 RUN poetry config virtualenvs.create false && \
     poetry install

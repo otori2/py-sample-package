@@ -1,1 +1,2 @@
-# Sample container for Python development
+# Sample package
+Test package

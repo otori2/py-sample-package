@@ -1,11 +1,11 @@
 // For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.191.0/containers/python-3
 {
-    "name": "python",
+    "name": "py-sample-package",
     "dockerComposeFile": [
         "../docker-compose.yml"
     ],
-    "service": "python",
+    "service": "py-sample-package",
     "workspaceFolder": "/workspace",
     // Set *default* container specific settings.json values on container create.
     "settings": {
@@ -15,17 +15,17 @@
             }
         },
         "terminal.integrated.defaultProfile.linux": "bash",
-        "python.pythonPath": "/usr/local/bin/python",
+        "python.pythonPath": "/root/.local/pipx/venvs/poetry/bin/python",
         "python.languageServer": "Pylance",
         "python.linting.enabled": true,
         "python.linting.pylintEnabled": true,
-        "python.formatting.blackPath": "/usr/local/bin/black",
-        "python.linting.banditPath": "/usr/local/bin/bandit",
-        "python.linting.flake8Path": "/usr/local/bin/flake8",
-        "python.linting.mypyPath": "/usr/local/bin/mypy",
-        "python.linting.pycodestylePath": "/usr/local/bin/pycodestyle",
-        "python.linting.pydocstylePath": "/usr/local/bin/pydocstyle",
-        "python.linting.pylintPath": "/usr/local/bin/pylint"
+        "python.formatting.blackPath": "/root/.local/pipx/venvs/poetry/bin/black",
+        "python.linting.banditPath": "/root/.local/pipx/venvs/poetry/bin/bandit",
+        "python.linting.flake8Path": "/root/.local/pipx/venvs/poetry/bin/flake8",
+        "python.linting.mypyPath": "/root/.local/pipx/venvs/poetry/bin/mypy",
+        "python.linting.pycodestylePath": "/root/.local/pipx/venvs/poetry/bin/pycodestyle",
+        "python.linting.pydocstylePath": "/root/.local/pipx/venvs/poetry/bin/pydocstyle",
+        "python.linting.pylintPath": "/root/.local/pipx/venvs/poetry/bin/pylint"
     },
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
